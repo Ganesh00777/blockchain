@@ -32,8 +32,23 @@ window.search = function(){
   $("#state-modal").css("display","block");
 }
 $("#searchBtn").click(function(){
+  // var id = 1;
+ 
+});
+$(".close").click(function(){
+  $("#state-modal").addClass("fade");
+ $("#state-modal").css("display","none");
+});
+$("#validate").click(function(){
+var otp = 1234;
+if(otp == $('#txtOtp').val())
+console.log('show pdf');
+else 
+alert("Please Enter Valid Otp");
+});
+$(".showReport").click(function(){
   nexmo.message.sendSms(
-    '918281408609', '918281408609', 'yo',
+    '918281408609', '918281408609', '1234',
       (err, responseData) => {
         if (err) {
           console.log(err);
@@ -44,24 +59,19 @@ $("#searchBtn").click(function(){
    );
   $("#state-modal").removeClass("fade");
  $("#state-modal").css("display","block");
-});
-$(".close").click(function(){
-  $("#state-modal").addClass("fade");
- $("#state-modal").css("display","none");
-});
-$("#validate").click(function(){
-
-
+  
 });
 
 window.login = function() {
-
- window.location.href ="search.html";
-  // Voting.deployed().then(funcAC477862f9c1a449ed234c5554fdfb287ftion(contractInstance) {
-  //   contractInstance.getUser.call(address).then(function(v) {
+  // var id =1;
+  // Voting.deployed().then(function(contractInstance) {
+  //   contractInstance.getUser.call(id).then(function(v) {
   //    console.log(v);
   //   });
-  // });var twilio = require('twilio');
+  // });
+
+  window.location.href ="search.html";
+//   var twilio = require('twilio');
  
 // Find your account sid and auth token in your Twilio account Console.
   

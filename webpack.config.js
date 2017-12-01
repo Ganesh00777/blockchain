@@ -31,7 +31,8 @@ module.exports = {
   },
   node: {
     fs: 'empty',
-    dns:'empty'
+    dns:'empty',
+    tls:'empty'
   }
   
 }
